@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGG.com</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/javascript/main.js"></script>
+</head>
+<body>
+    <main>
+        <form name="ngg_form">
+        <div class="style_div">
+        <header>
+            <h1>Number Guessing Game</h1>
+            <h2>I'm thinking of a number between 1-100,</h2>
+            <h2>can you guess it?</h2>
+        </header>
+        <section class="inputs">
+            <article>
+                <h3>How many rounds of guessing do you need?</h3>
+                    <div class="input_radiob_div">
+                        <input type="radio" id="radiob3" class="radiobutton" name="radiob" value="3" checked>
+                        <label for="radiob3">3</label>
+    
+                        <input type="radio" id="radiob6" class="radiobutton" name="radiob" value="6">
+                        <label for="radiob6">6</label><br>
+    
+                        <input type="radio" id="radiob8" class="radiobutton" name="radiob" value="8">
+                        <label for="radiob8">8</label>
+    
+                        <input type="radio" id="radiob10" class="radiobutton" name="radiob" value="10">
+                        <label for="radiob10">10</label>
+                    </div>
+            </article>
+            <article>
+                <div class="input_number_div">
+                    <input type="number" placeholder="1-100" id="guess"><br>
+                    <button id="guess_button">Guess</button>
+                </div>
+            </article>
+        </section>
+        </div>
+        <section class="outputs">
+            <article>
+                    <div class="output_numbers_div">
+                        <p id="current_round">Current round: 0</p>
+                        <p id="guess_numbers">Number of guesses: 0</p>
+                        <p id="wrong_guesses">Wrong guesses: None</p>
+                    </div>
+                    <div class="output_text_div">
+                        <p id="text_result"></p>
+                    </div>
+                    <div class="restart_div">
+                        <button id="restart_button">New Game</button>
+                    </div>
+            </article>
+        </section>
+        </form>
+    </main>
+</body>
+</html>

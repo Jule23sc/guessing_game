@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(to left, mediumorchid, lightsalmon,);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    header {
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px orchid;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+
+   .input_radiob_div {
+        text-align: center;
+        input[type=radio] {
+            accent-color: pink;
+        }
+   }
+    .input_number_div {
+        align-items: center;
+    }
+
+    .style_div {
+        background-color: whitesmoke;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px darkorchid;
+        position: absolute;
+        width: 50%;
+        min-width: 580px;
+        transform: translate(-50%, -110%);
+        top: 50%;
+        left: 50%;
+        padding: 50px 10px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .outputs {
+        position: relative;
+
+        .output_numbers_div {
+            background-color: whitesmoke;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px darkorchid;
+            position: absolute;
+            width: 50%;
+            min-width: 580px;
+            transform: translate(-110%, 190%);
+            top: 80%;
+            left: 80%;
+            padding: 50px 10px;
+            display: grid;
+            justify-items: center;
+        }
+
+        .restart_div {
+            background-color: whitesmoke;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px darkorchid;
+            width: 50%;
+            min-width: 580px;
+            transform: translate(50%, 470%);
+            top: 80%;
+            left: 80%;
+            padding: 50px 10px;
+            display: grid;
+            justify-items: center;
+        }
+    }
+}
