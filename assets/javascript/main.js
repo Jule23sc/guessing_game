@@ -56,39 +56,59 @@ function checkRoundCounter() {
 };
 
 
+//func() disable inputs
+function disableInputs() {
+    guessButton.disabled = true;
+    guessInput.disabled = true;
+}
+
+
 //func() check num and do outputs
 function gamePlay(event) {
     event.preventDefault();
     checkRoundCounter();
-    if(round === 1) {
+    if(guessInput.value === "") {
+        textResultOutput.textContent = "Please provide a number!";
+        return
+    } else if(round === 1) {
         getMaxRounds();
         randomNumber = getRandomNumber();
     }
-    if(round > maxRounds) {
-        return
-    }
-    roundsOutput.textContent = "This is round" + round + "of" + maxRounds;
+    roundsOutput.textContent = "This is round" + " " + round + " " + "of" + " " + maxRounds;
     //console.log(maxRounds);
     const guessNumber = Number(guessInput.value);
-    console.log(guessNumber);
-    console.log(randomNumber);
+    //console.log(guessNumber);
+    //console.log(randomNumber);
     if(guessNumber === randomNumber) {
         textResultOutput.textContent = "Congratulations, this is the correct guess!";
+        disableInputs();
     } else if(guessNumber < randomNumber) {
         textResultOutput.textContent = "Too low, try again";
     } else if(guessNumber > randomNumber) {
         textResultOutput.textContent = "Too high, try again";
     }
     wrongGuessesOutput.textContent = guessNumber;
+    if(round === maxRounds) {
+        textResultOutput.textContent = "Too bad, you lose"
+        disableInputs();
+        return
+    }
 };
+
 
 guessButton.addEventListener("click", gamePlay);
 //wenn js addeventlistener = html ohne button="onclick"
 
-//spielbeenden logik, beenden wenn runde/ wenn ergebnis
+
+//func() enable inputs
+function enableInputs() {
+    guessButton.disable = false;
+    guessInput.disable = false;
+}
 
 //func() restart
 restartInput.addEventListener("click", function() {
+    enableInputs();
     roundsInput = "";
     guessInput = "";
 
